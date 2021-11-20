@@ -1,0 +1,99 @@
+<!-- <div class="container mt-5">
+    <h1>DEMO SO CUTE</h1>
+    <input type="text" class="mt-3 mb-3 mr-3" [(ngModel)]="text">
+    <button class="btn btn-primary" [disabled]="text.length==0" (click)="sendMessage()">Send Message</button>
+    <h4 class="mb-3">List of Messages</h4>
+
+    <div *ngIf="ChatService.messages.length==0">
+        <p>You haven't send or received messages</p>
+    </div>
+    <div *ngFor="let m of ChatService.messages">
+        <div class="mb-2 mt-2">
+            <div><strong>ConnectionID</strong> {{m.accountid}}</div>
+            <div><strong>Date</strong> {{m.date | date}}</div>
+            <div><strong>Message</strong> {{m.messages}}</div>
+            <hr>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="top">
+                    <h4 class="mt-2">Inbox</h4>
+                </div>
+                <div class="bottom">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="image"> <img src="https://i.imgur.com/jhsYqVT.png" width="70"> <span class="type"><img src="https://i.imgur.com/4lg6mOg.png" width="20"></span> </div>
+                            <div class="d-flex flex-column line-height ml-2"> <span class="font-weight-bold">hannahdat21</span> <span>Can i order online?</span> <span class="d-flex flex-row align-items-center l-now"><small class="live"></small>Live now</span> </div>
+                        </div> <span class="dots"> </span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="image"> <img src="https://i.imgur.com/vxEWOFl.png" width="70"> <span class="type"><img src="https://i.imgur.com/CngJIFw.png" width="20"></span> </div>
+                            <div class="d-flex flex-column line-height ml-2"> <span class="font-weight-bold">hannahdat21</span> <span>Is this still available?</span> <span class="d-flex flex-row align-items-center l-now"><small class="live"></small>Live now</span> </div>
+                        </div> <span class="dots"> </span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="image"> <img src="https://i.imgur.com/jhsYqVT.png" width="70"> <span class="type"><img src="https://i.imgur.com/4lg6mOg.png" width="20"></span> </div>
+                            <div class="d-flex flex-column line-height ml-2"> <span class="font-weight-bold">hannahdat21</span> <span>Thanks hannah!</span> <span class="d-flex flex-row align-items-center l-now"><small class="live"></small>Live now</span> </div>
+                        </div> <span class="dots"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="page-content page-container" id="page-content">
+                <div class="padding">
+                    <div class="row container d-flex justify-content-center">
+                        <div class="col-12">
+                            <div class="card card-bordered">
+                                <div class="card-header">
+                                    <h4 class="card-title"><strong>Chat</strong></h4> <a class="btn btn-xs btn-secondary" href="#" data-abc="true">Let's Chat App</a>
+                                </div>
+                                <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+                                    <div *ngFor="let ms of ChatService.messages">
+                                        <div class="media media-chat">
+                                            <div *ngIf="ms.accountname !== ChatService.userName">
+                                                <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                                                <div class="media-body">
+                                                    <p>{{ms.messages}}</p>
+                                                    <p class="meta"><time datetime="2018">23:58</time></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="media media-meta-day">Today</div> -->
+                                        <div class="media media-chat media-chat-reverse">
+                                            <div *ngIf="ms.accountname == ChatService.userName">
+                                                <div class="media-body">
+                                                    <p>{{ms.messages}}</p>
+                                                    <!-- <p class="meta"><time datetime="2018">00:06</time></p> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                        <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                                        <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                                    </div>
+                                </div>
+                                <div class="publisher bt-1 border-light"> <img class="avatar avatar-xs" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                                    <input class="publisher-input" type="text" placeholder="Write something" [(ngModel)]="text">
+                                    <span class="publisher-btn file-group"><i class="fa fa-paperclip file-browser"></i> <input type="file"> </span>
+                                    <button class="publisher-btn" href="#" data-abc="true"><i class="fa fa-smile"></i></button>
+                                    <button class="publisher-btn text-info" [disabled]="text.length==0" (click)="sendMessage()" data-abc="true"><i class="fa fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="history shadow">
+    <div class="tophistory">
+        <img src="assets/images/img1.jpg" alt="image 1">
+    </div>
+    <div class="mainhistory">
+        <div class="row">
+            <div class="stories col-8">
+                <audio src="{{SrcAudio}}" controls style="width: 100%;border:solid black 1px; border-radius: 30px; margin-bottom: 30px;"></audio>
+                <div *ngFor="let ts of test" style="display: inline-block;">
+                    <p *ngIf="ts.type == 'lable'">{{ts.value}}</p>
+                    <p> </p>
+                    <input class="test-input" type="text" *ngIf="ts.type == 'input'" (change)="onChange($event, ts)" [style.color]="ts.id == curInputCheck ? textColor: 'black'">
+                    <p> </p>
+                </div>
+                <br>
+                <button type="button" class="btn btn-success btn-md" (click)="CheckResult()">Check result</button>
+                <div class="speak-test" *ngIf="isSpeakTest == true">
+                    <!-- <div class="speak-test"> -->
+                    <app-speak-test sampleText={{testParagraph}}></app-speak-test>
+                </div>
+            </div>
+            <div class="col-4">
+                <app-example></app-example>
+            </div>
+        </div>
+    </div>
+</div>

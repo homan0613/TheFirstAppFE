@@ -1,0 +1,26 @@
+.speak-test {
+    margin-top: 30px;
+}
+
+.sample {
+    padding: 20px;
+    border: lightskyblue solid 1px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+.sample input {
+    min-height: 100px;
+    width: 100%;
+    border: none;
+}
+
+.sample textarea:focus,
+input:focus {
+    outline: none !important;
+    /* border: lightskyblue solid 1px; */
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}

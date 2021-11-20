@@ -1,0 +1,29 @@
+<div class="row speak-test">
+    <div class="col-12 shadow sample" *ngIf="IsSpeakTest==true">
+        <span>{{sampleText}}
+        </span>
+    </div>
+
+    <div class="col-5 btn-group">
+        <button type="button" class="btn btn-danger btn-md" (click)="startListen()">Start Record</button>
+        <button type="button" class="btn btn-danger btn-md" (click)="refreshInput()">refresh</button>
+        <button type="button" class="btn btn-danger btn-md" (click)="CheckListen()">Check</button>
+    </div>
+
+    <div class="col-1">
+    </div>
+    <div class="col-1">
+    </div>
+    <div class="col-12 shadow sample">
+        <ng-container>
+            <input type="text" name="" id="" value="{{voiceText}}">
+        </ng-container>
+    </div>
+
+    <div class="col-12 shadow sample">
+        <span *ngFor="let ts of test" style="display: inline-block;">
+            <p *ngIf="ts.type == 'correct'">&nbsp;{{ts.value}}&nbsp;</p>
+            <p *ngIf="ts.type == 'error'" style="color: red;">&nbsp;{{ts.value}}&nbsp;</p>
+        </span>
+    </div>
+</div>

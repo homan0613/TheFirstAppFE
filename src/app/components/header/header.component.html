@@ -1,0 +1,54 @@
+<div class="header">
+    <div class="topheader">
+        <nav class="navbar navbar-toggleable-xl navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">English For Me</a>
+                <span class="rightheader">
+                    <form class="d-flex">
+                        <input class="form-control me-2 inputsearch" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success searchheaderbtn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="networkbtn">
+                        <button class="btn btn-outline-success" type="submit"><i class="fab fa-facebook"></i></button>
+                        <button class="btn btn-outline-success" type="submit"><i class="fab fa-instagram"></i></button>
+                    </div>
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div class="menulist">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+                        <a class="nav-link" href="/stories">Stories</a>
+                        <a class="nav-link" href="/chat">Chat test</a>
+                        <a class="nav-link" href="#">Sentence</a>
+                        <a class="nav-link" href="#">Phrase</a>
+                        <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<script>
+    var scrolling = false;
+    $(window).on('scroll', function() {
+        if (!scrolling) {
+            scrolling = true;
+            (!window.requestAnimationFrame) ?
+            setTimeout(autoHideHeader, 250): requestAnimationFrame(autoHideHeader);
+        }
+    });
+
+    function autoHideHeader() {
+        $(".topheader").css("display", "none");
+    }
+</script>

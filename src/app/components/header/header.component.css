@@ -1,0 +1,40 @@
+.menulist {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.header {
+    z-index: 1000;
+}
+
+.topheader {
+    position: relative;
+    width: 100%;
+    z-index: 4;
+}
+
+.searchheaderbtn {
+    margin-left: -9px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.inputsearch {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.rightheader {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.networkbtn button {
+    margin-left: 5px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}

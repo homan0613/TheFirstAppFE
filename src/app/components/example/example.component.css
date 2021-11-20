@@ -1,0 +1,14 @@
+.storyimg img {
+    width: 90%;
+    height: 200px;
+}
+
+.lsstories {
+    /* border: 1px black solid; */
+    border-radius: 10px;
+}
+
+.story {
+    padding: 5px;
+    text-align: center;
+}

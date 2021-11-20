@@ -1,0 +1,16 @@
+<!-- <div class="header">
+
+</div> -->
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <!-- <div class="leftside col-3" [hidden]=isLoaded>
+        <app-leftside></app-leftside>
+    </div> -->
+        <div class="mainside col" [ngClass]="{'mainside': isDisplayClass }">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

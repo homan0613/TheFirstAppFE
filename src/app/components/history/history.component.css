@@ -1,0 +1,24 @@
+.history {
+    /* border: 1px black solid; */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+
+/* .tophistory {} */
+
+.tophistory img {
+    height: 500px;
+    width: 100%;
+}
+
+.mainhistory {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.stories img {
+    width: 80%;
+    height: 200px;
+}

@@ -1,0 +1,15 @@
+<div class="ls-stories" style="margin-top: 30px;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item shadow" *ngFor="let story of StoriesList" style="margin-bottom: 10px;">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{story?.title}}</h5>
+                    <p class="card-text">Some quick example text to build on the panel title and make up the bulk of the panel's content.</p>
+                    <a class="card-link" href="/stories/detail/{{story['id']}}">Go to Detail</a>
+                    <a class="card-link" href="/stories/test/{{story['id']}}">Go to test</a>
+                    <!-- <a class="card-link" href="/stories/speaktest">Go to speak test</a> -->
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

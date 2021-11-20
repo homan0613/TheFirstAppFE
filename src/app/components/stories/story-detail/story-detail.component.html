@@ -1,0 +1,17 @@
+<div class="history shadow">
+    <div class="tophistory">
+        <img src="assets/images/img1.jpg" alt="image 1">
+    </div>
+    <div class="mainhistory">
+        <div class="row">
+            <div class="stories col-8">
+                <audio src="{{SrcAudio}}" controls style="width: 100%;border:solid black 1px; border-radius: 30px; margin-bottom: 30px;"></audio>
+                <div [innerHTML]="story['content']"></div>
+            </div>
+            <div class="col-4">
+                <app-example></app-example>
+            </div>
+        </div>
+    </div>
+    <app-image action="Stories" actionId="{{id}}" imageId="0"></app-image>
+</div>

@@ -1,0 +1,19 @@
+<div class="history shadow">
+    <div class="tophistory">
+        <img src="assets/images/img1.jpg" alt="image 1">
+    </div>
+    <div class="mainhistory">
+        <div class="row">
+            <div class="stories col-8">
+                <audio controls style="width: 100%; z-index: -1;position: relative; border:solid black 1px; border-radius: 30px; margin-bottom: 30px;">
+                    <source src="horse.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                  </audio>
+                <div [innerHTML]="story['content']"></div>
+            </div>
+            <div class="col-4">
+                <app-example></app-example>
+            </div>
+        </div>
+    </div>
+</div>
